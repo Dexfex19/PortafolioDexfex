@@ -1,0 +1,26 @@
+:root {
+    /* Colores predeterminados*/
+    --color-text:#fff;
+    --color-background1: #5b5b5b;
+    --color-background2:#2e2e2e;
+    --color-primary: #d0bc7b;
+    --color-secondary: #a37a42;
+    --color-tertiary: #9c0000;
+
+      /* Colores en formato RGBA */
+  --color-text-rgba: rgba(255, 255, 255, 1); /* Blanco opaco */
+  --color-background1-rgba: rgba(91, 91, 91, 1); /* Fondo 1 opaco */
+  --color-background2-rgba: rgba(46, 46, 46, 1); /* Fondo 2 opaco */
+  --color-primary-rgba: rgba(208, 188, 123, 1); /* Primario opaco */
+  --color-secondary-rgba: rgba(163, 122, 66, 1); /* Secundario opaco */
+  --color-tertiary-rgba: rgba(156, 0, 0, 1); /* Terciario opaco */
+
+  /* Colores en formato RGBA con transparencia */
+  --color-primary-rgba-transparent: rgba(208, 188, 123, 0.5); /* 90% opaco */
+  --color-secondary-rgba-transparent: rgba(163, 122, 66, 0.6); /* 90% opaco */
+  --color-tertiary-rgba-transparent: rgba(156, 0, 0, 0.9); /* 90% opaco */
+
+    --font-roboto: "Roboto";
+    --font-montserrat: "Montserrat"
+
+}

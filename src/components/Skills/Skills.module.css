@@ -1,0 +1,87 @@
+@import "../../vars.css";
+
+.skillsSection {
+  text-align: center;
+  margin: 30px auto; /* Cambiar para centrar con margen automático */
+  width: 50%; /* Ajusta el ancho según lo necesites */
+  max-width: 1200px; /* Ajusta el ancho máximo según lo necesites */
+  align-self: center;
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: var(--color-primary);
+}
+.subTitles{
+  font-family: var(--font-montserrat);
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--color-tertiary);
+  font-weight:bolder;
+}
+
+.carousel {
+  overflow: hidden;
+  margin-bottom: 50px;
+  position: relative;
+  display: flex; /* Agregado para centrar el contenido del carrusel */
+  justify-content: center; /* Asegura que el contenido del carrusel esté centrado */
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 20px;
+  width: calc(100% * 2); /* Doble el ancho para la animación continua */
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Ajusta este valor si es necesario */
+  }
+}
+
+.carouselItem {
+  min-width: 200px;
+  max-width: 250px;
+  background-color: var(--color-background2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: var(--color-text);
+  font-family: var(--font-roboto);
+  text-align: center;
+}
+
+.carouselItem img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.carouselItem p {
+  font-size: 18px;
+}
+
+.carousel:hover .carouselTrack {
+  animation-play-state: paused;
+}
+
+@media screen and (max-width: 768px) {
+  .carouselTrack {
+    flex-direction: column;
+    align-items: center;
+    animation: none;
+  }
+
+  .carouselItem {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}

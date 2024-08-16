@@ -1,0 +1,108 @@
+@import "../../vars.css";
+
+
+.navbar {
+  position: fixed; /* Cambia de relative a fixed */
+  top: 0; /* Asegura que el navbar esté en la parte superior */
+  left: 0; /* Asegura que el navbar esté alineado a la izquierda */
+  right: 0; /* Asegura que el navbar esté alineado a la derecha */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px; /* Ajusta el padding según sea necesario */
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+  background-color: var(--color-background1); /* Añade un fondo para que el navbar sea visible sobre otros contenidos */
+}
+
+/* Ajusta el padding superior para compensar el espacio que ocupa el navbar */
+body {
+  padding-top: 10px; /* Ajusta este valor al tamaño del navbar para evitar que el contenido quede oculto debajo del navbar */
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  padding-right: 30px;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.languageButton {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.languageButton:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-background1);
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+  }
+
+  .menuBtn {
+    display: block;
+    cursor: pointer;
+    width: 35px; 
+    height: 35px; 
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    border-radius: 10px;
+    background: linear-gradient(
+      90deg,
+      var(--color-primary-rgba-transparent) 0%,
+      var(--color-secondary-rgba-transparent) 100%
+    );
+    padding: 24px 33px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .menuOpen {
+    display: flex;
+    z-index: 1;
+  }
+}
