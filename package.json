@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.18",
     "@fontsource/roboto": "^5.0.14",
+    "gh-pages": "^6.1.1",
     "i18next": "^23.12.3",
+    "portafoliodexfex": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.1"
